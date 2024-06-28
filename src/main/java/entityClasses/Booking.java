@@ -1,36 +1,22 @@
 package entityClasses;
 
+import java.util.Date;
+
 public class Booking {
     private int id;
-    private int customerId;
-    private int roomId;
     private String startDate;
     private String endDate;
-    // Getters and setters
+    private Customer customer;
+    private Room room; // Add Room to Booking
+    private Payment payment;
 
-
+    // Getters and Setters
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
-    }
-
-    public int getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(int roomId) {
-        this.roomId = roomId;
     }
 
     public String getStartDate() {
@@ -48,4 +34,29 @@ public class Booking {
     public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
 }
+

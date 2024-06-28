@@ -1,13 +1,15 @@
 package entityClasses;
 
+import java.util.List;
+
 public class Room {
     private int id;
-    private int hotelId;
+    private String roomNumber;
     private String type;
-    private double price;
+    private Hotel hotel;
+    private List<Booking> bookings; // List of bookings for this room
 
-    // Getters and setters
-
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -16,12 +18,12 @@ public class Room {
         this.id = id;
     }
 
-    public int getHotelId() {
-        return hotelId;
+    public String getRoomNumber() {
+        return roomNumber;
     }
 
-    public void setHotelId(int hotelId) {
-        this.hotelId = hotelId;
+    public void setRoomNumber(String roomNumber) {
+        this.roomNumber = roomNumber;
     }
 
     public String getType() {
@@ -32,12 +34,21 @@ public class Room {
         this.type = type;
     }
 
-    public double getPrice() {
-        return price;
+    public Hotel getHotel() {
+        return hotel;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
     }
 }
+
 

@@ -1,8 +1,14 @@
 package entityClasses;
 
+import java.util.List;
+
 public class Customer {
     private int id;
+    private String name;
+    private String email;
+    private List<Booking> bookings; // List of bookings for this customer
 
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -27,7 +33,12 @@ public class Customer {
         this.email = email;
     }
 
-    private String name;
-    private String email;
-    // Getters and setters
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }
+

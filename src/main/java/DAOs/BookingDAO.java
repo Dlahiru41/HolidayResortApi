@@ -40,10 +40,11 @@ public class BookingDAO {
             return Response.status(Response.Status.NOT_FOUND).entity("Booking not found").build();
         }
         // Validate and update booking data
-        existingBooking.setCustomerId(updatedBooking.getCustomerId());
-        existingBooking.setRoomId(updatedBooking.getRoomId());
         existingBooking.setStartDate(updatedBooking.getStartDate());
         existingBooking.setEndDate(updatedBooking.getEndDate());
+        existingBooking.setCustomer(updatedBooking.getCustomer());
+        existingBooking.setRoom(updatedBooking.getRoom());
+        existingBooking.setPayment(updatedBooking.getPayment());
         // Update other fields as necessary
         return Response.status(Response.Status.OK).entity(existingBooking).build();
     }

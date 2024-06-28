@@ -40,9 +40,11 @@ public class PaymentDAO {
             return Response.status(Response.Status.NOT_FOUND).entity("Payment not found").build();
         }
         // Validate and update payment data
-        existingPayment.setBookingId(updatedPayment.getBookingId());
         existingPayment.setAmount(updatedPayment.getAmount());
-        existingPayment.setStatus(updatedPayment.getStatus());
+        existingPayment.setPaymentDate(updatedPayment.getPaymentDate());
+        existingPayment.setPaymentMethod(updatedPayment.getPaymentMethod());
+        existingPayment.setCustomer(updatedPayment.getCustomer());
+        existingPayment.setBooking(updatedPayment.getBooking());
         // Update other fields as necessary
         return Response.status(Response.Status.OK).entity(existingPayment).build();
     }
@@ -61,3 +63,4 @@ public class PaymentDAO {
         return new ArrayList<>(payments.values());
     }
 }
+

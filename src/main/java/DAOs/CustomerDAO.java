@@ -1,10 +1,11 @@
 package DAOs;
+import entityClasses.Customer;
+
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import entityClasses.Customer;
 
 public class CustomerDAO {
 
@@ -40,6 +41,7 @@ public class CustomerDAO {
         // Validate and update customer data
         existingCustomer.setName(updatedCustomer.getName());
         existingCustomer.setEmail(updatedCustomer.getEmail());
+        existingCustomer.setBookings(updatedCustomer.getBookings());
         // Update other fields as necessary
         return Response.status(Response.Status.OK).entity(existingCustomer).build();
     }
@@ -52,7 +54,6 @@ public class CustomerDAO {
         customers.remove(id);
         return Response.status(Response.Status.OK).entity("Customer deleted successfully").build();
     }
-
 
     // Get all customers (optional)
     public List<Customer> getAllCustomers() {

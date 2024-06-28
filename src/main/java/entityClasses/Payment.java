@@ -2,9 +2,43 @@ package entityClasses;
 
 public class Payment {
     private int id;
-    private int bookingId;
     private double amount;
-    private String status;
+    private String paymentDate;
+    private String paymentMethod;
+    private Customer customer;
+    private Booking booking;
+
+    public String getPaymentDate() {
+        return paymentDate;
+    }
+
+    public void setPaymentDate(String paymentDate) {
+        this.paymentDate = paymentDate;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Booking getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
+    }
 
     public int getId() {
         return id;
@@ -14,13 +48,6 @@ public class Payment {
         this.id = id;
     }
 
-    public int getBookingId() {
-        return bookingId;
-    }
-
-    public void setBookingId(int bookingId) {
-        this.bookingId = bookingId;
-    }
 
     public double getAmount() {
         return amount;
@@ -29,13 +56,4 @@ public class Payment {
     public void setAmount(double amount) {
         this.amount = amount;
     }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-    // Getters and setters
 }

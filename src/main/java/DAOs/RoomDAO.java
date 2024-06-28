@@ -40,9 +40,10 @@ public class RoomDAO {
             return Response.status(Response.Status.NOT_FOUND).entity("Room not found").build();
         }
         // Validate and update room data
-        existingRoom.setHotelId(updatedRoom.getHotelId());
+        existingRoom.setRoomNumber(updatedRoom.getRoomNumber());
         existingRoom.setType(updatedRoom.getType());
-        existingRoom.setPrice(updatedRoom.getPrice());
+        existingRoom.setHotel(updatedRoom.getHotel());
+        existingRoom.setBookings(updatedRoom.getBookings());
         // Update other fields as necessary
         return Response.status(Response.Status.OK).entity(existingRoom).build();
     }
@@ -61,3 +62,4 @@ public class RoomDAO {
         return new ArrayList<>(rooms.values());
     }
 }
+
